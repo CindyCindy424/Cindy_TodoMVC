@@ -1,3 +1,6 @@
+ <!-- 1850477 邓欣凌
+Tongji SSE Web Programming  -->
+
 <!DOCTYPE html>
 <html>
     <header>
@@ -8,47 +11,11 @@
         <meta name="description" content="Course Project for Tongji SSE" />
         <!-- style list -->
         <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./css/iconfont.css">
         <link rel="stylesheet" href="./css/menu.css">
     </header>
     <body>
-        <!-- edit panel
-        <div id='editPanel' class="hiddenTotal">
-            <div class="controlItem">
-                <textarea id="editTextarea" class="editTextarea" rows='3'></textarea>
-                <div class="editPanelTime">
-                    <span>Created at</span>
-                    <span id="editPanelTime"></span>
-                </div>
-            </div>
-            <div class='controlItem' id="completeItem-1"><span class="iconfont"></span><span></span></span></div>
-            <div class='controlItem' id="deleteItem"><span class="iconfont icon-deletetext"></span>Delete</div>
-            <div class='controlItem' id="closeEditPanel"><span class="iconfont icon-close"></span>Close</div>
-        </div> -->
-
-        <!-- menu panel -->
-        <div id='controlPanel' class="hiddenTotal">
-            <div class='controlItem' id="completeAll"><span class="iconfont icon-check"></span>Complete All</div>
-            <div class='controlItem' id="undoAll"><span class="iconfont icon-quxiao"></span>Undo All</div>
-            <div class='controlItem' id="deleteCompleted"><span class="iconfont icon-deletetext"></span>Delete Completed Items</div>
-            <div class='controlItem'>
-                <div><span class="iconfont icon-pifu"></span>Color</div>
-                <div id="colorSeletor"></div>
-            </div>
-            <div class='controlItem'>
-                <div><span class="iconfont icon-fangdajing-copy"></span>Search</div>
-                <input id="searchBlock" class="search"></input>
-            </div>
-            <div class='controlItem' id="closeControlPanel"><span class="iconfont icon-close"></span>Close</div>
-        </div>
-
         <!-- main layout  -->
         <div class="title" id="title">
-            <!-- <span>T</span>
-            <span>o</span>
-            <span>d</span>
-            <span>o</span>
-            <span>s</span> -->
             Todos
             <span><a id="todo-icon">📜</a></span>
         </div>
@@ -63,9 +30,6 @@
 
 
         <div class="block">
-            <!-- <div style="text-align:center">
-                <input id="inputBlock" class="input"></input>
-            </div> -->
             <div class="filter-header itemInner">
                 <div id="displayAll"class="filter selected" style="cursor:pointer;">All</div>
                 <div id="displayDone"class="filter" style="cursor:pointer;">Finished</div>
@@ -73,17 +37,7 @@
                 <div class="searchResultIcon" style="cursor:pointer;display: none;">Results</div>
                 <a class="Num" id="Num-cnt" >× Num</a>
             </div>
-            <!-- <input class="toggle-all" type="checkbox"> -->
             <div id="list" class="itemList"></div>
-            <!-- <div id="buttonArea">
-                <div id="showAll" class="selectButton">All</div>
-                <div id="showDone" class="selectButton">Done</div>
-                <div id="showProcess" class="selectButton">Process</div>
-                <div id="showSearchResult" class="selectButton">Result</div>
-                <div id="menu" class="selectButton">Menu</div>
-            </div> -->
-            <!-- <div class="clear-completed" style="bottom: 0px;"></div> -->
-            <!-- <div class="toggle-all" style="bottom: 10px;"></div> -->
         </div>
 
         <!-- Menu-trigger -->
@@ -104,7 +58,6 @@
           <ul id="menu-sliding">
               <input type="checkbox" class="toggle-all menu">
             <li><a class="menu-a" ><embed class='InputSVG'src="./res/finishall.svg" type="image/svg+xml" style="width: 40px;height: 40px;" /> Finish All</a></li>
-            <!-- <input type="checkbox" class="toggle-all"> -->
             <li><a class="menu-a" ><embed class='InputSVG'src="./res/undo.svg" type="image/svg+xml" style="width: 40px;height: 40px;" /> Undo All</a></li>
             <input type="checkbox" class="clear-completed menu">
             <li><a class="menu-a clear-completed"><embed class='InputSVG'src="./res/delete.svg" type="image/svg+xml" style="width: 40px;height: 40px;" /> Delete Fini</a></li>
@@ -132,7 +85,6 @@
                 <a id="ColorIcon">
                     <embed id='ColorSVG'src="./res/color.svg" type="image/svg+xml" style="width: 10%;height: 10%;" />
                 </a>
-                <!-- <input id="ColorinputBlock" class="input" placeholder="  🔴 🟠 🟡 🟢 🔵  " style="text-align-last: center;"></input> -->
                 <div class="input" id="colorInputBox"style="display: inline-block;"> </div>
             </div> 
         </div>
@@ -140,8 +92,5 @@
 
 
         <script src="./js/TodoMVC.js"></script>
-        <!-- <script src="./js/slidingmenu.js"></script> -->
-        <!-- <script src="./js/utils.js"></script>
-        <script src="./js/filter.js"></script> -->
     </body>
 </html>

@@ -39,13 +39,13 @@
 
 主界面设计如下图所示：
 
-![图片1](D:\我的D盘\同济大学\大三下\脚本程序设计\pic\图片1.png)
+![图片1](https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/图片1.png)
 
 
 
 为了提升应用的美观和可用性，系统设计了`滑动菜单栏`.
 
-![](D:\我的D盘\同济大学\大三下\脚本程序设计\pic\图片2.png)
+![](https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/图片2.png)
 
 
 
@@ -55,7 +55,7 @@
 
 选中某一任务项，左滑进入编辑和颜色修改页面，右滑删除。
 
-![图片3](D:\我的D盘\同济大学\大三下\脚本程序设计\pic\图片3.png)
+![图片3](https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/图片3.png)
 
 
 
@@ -64,19 +64,19 @@
 - 左滑编辑/切换颜色
 - 右滑删除任务
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210628141724276.png" alt="image-20210628141724276" style="zoom:50%;" /><img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210628141739500.png" alt="image-20210628141739500" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210628141724276.png" alt="image-20210628141724276" style="zoom:50%;" /><img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210628141739500.png" alt="image-20210628141739500" style="zoom:50%;" />
 
 
 
 系统为新用户提供了新手教程，同时也对数据做了持久化处理，努力提升老用户的使用体验。
 
-![图片4](D:\我的D盘\同济大学\大三下\脚本程序设计\pic\图片4.png)
+![图片4](https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/图片4.png)
 
 
 
 系统也进行了用户友好优化，提供文字/图标提示 & 错误反馈等。
 
-<img src="D:\我的D盘\同济大学\大三下\脚本程序设计\pic\图片5.png" alt="图片5" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/图片5.png" alt="图片5" style="zoom:50%;" />
 
 
 
@@ -88,7 +88,7 @@
 
 主页面中间即为可供用户进行输入的输入框。用户完成输入后即可查看刚才新增加的任务。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626081253628.png" alt="image-20210626081253628" style="zoom: 50%;" /><img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626081641103.png" alt="image-20210626081641103" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626081253628.png" alt="image-20210626081253628" style="zoom: 50%;" /><img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626081641103.png" alt="image-20210626081641103" style="zoom:50%;" />
 
 
 
@@ -96,25 +96,25 @@
 
 在每条任务的后面附有一个删除按钮，用户点击删除按钮即刻删除该任务。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626081759711.png" alt="image-20210626081759711" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics\image-20210626081759711.png" alt="image-20210626081759711" style="zoom:50%;" />
 
 1.3 展现完整任务列表
 
 用户点击`All`按钮查看当前所有任务（包括已完成和未完成任务）。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626081914522.png" alt="image-20210626081914522" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626081914522.png" alt="image-20210626081914522" style="zoom:50%;" />
 
 1.4 查看已完成任务列表
 
 用户点击`Finished`按钮查看当前已完成任务清单。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626082034237.png" alt="image-20210626082034237" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626082034237.png" alt="image-20210626082034237" style="zoom:50%;" />
 
 1.5 查看未完成任务列表
 
 用户点击`NotYet`按钮查看当前未完成任务清单。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626082102439.png" alt="image-20210626082102439" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626082102439.png" alt="image-20210626082102439" style="zoom:50%;" />
 
 
 
@@ -122,7 +122,7 @@
 
 用户点击应用左上角的菜单按钮即可打开主菜单，然后选择`Finish All`即可。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626082256757.png" alt="image-20210626082256757" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626082256757.png" alt="image-20210626082256757" style="zoom:50%;" />
 
 
 
@@ -160,13 +160,13 @@
 
 系统允许用户对已发布的任务进行修改。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626091041615.png" alt="image-20210626091041615" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626091041615.png" alt="image-20210626091041615" style="zoom:50%;" />
 
 2.3 搜索任务列表
 
 系统允许用户直接在列表栏种搜索相关内容，提升工作效率。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626091103839.png" alt="image-20210626091103839" style="zoom:40%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626091103839.png" alt="image-20210626091103839" style="zoom:40%;" />
 
 
 
@@ -174,7 +174,7 @@
 
 系统允许用户对不同任务置以不同背景颜色，以区分不同任务的重要程度/难易程度。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626091133291.png" alt="image-20210626091133291" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626091133291.png" alt="image-20210626091133291" style="zoom:50%;" />
 
 
 
@@ -182,7 +182,7 @@
 
 系统为新用户提供了新手教程，以任务的形式存在于任务栏中，帮助用户更快上手。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626091146478.png" alt="image-20210626091146478" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626091146478.png" alt="image-20210626091146478" style="zoom:50%;" />
 
 
 
@@ -192,7 +192,7 @@
 
 利用贝塞尔函数（cubic-bezier）实现了浮动窗口的滑出效果，提升美观，同时提供菜单界面提高效率。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626091205245.png" alt="image-20210626091205245" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626091205245.png" alt="image-20210626091205245" style="zoom:50%;" />
 
 
 
@@ -206,7 +206,7 @@
 
 当用户的输入为空且尝试进行提交时，系统会将输入框变红并显示提示字样。
 
-<img src="C:\Users\Cindy Deng\AppData\Roaming\Typora\typora-user-images\image-20210626090718724.png" alt="image-20210626090718724" style="zoom:50%;" />
+<img src="https://github.com/CindyCindy424/Cindy_TodoMVC/blob/master/pics/image-20210626090718724.png" alt="image-20210626090718724" style="zoom:50%;" />
 
 
 

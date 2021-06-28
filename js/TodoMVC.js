@@ -1,3 +1,7 @@
+
+//1850477 邓欣凌
+// Tongji SSE Web Programming
+
 var $ = function(sel) {
     return document.querySelector(sel);
   };
@@ -76,39 +80,6 @@ function updateStorage(){
     localStorage.setItem('itemData',JSON.stringify(itemListStore));
 }
 
-// function getStorage(){
-//     // itemListStore = JSON.parse(localStorage.itemData);
-//     if(!localStorage.itemData){
-//         var tempArr=JSON.parse(localStorage.itemData);
-//     }else{
-//         var tempArr = [];
-//     }
-    
-//     for(var i=0;i<tempArr.length;i++){
-//         itemListStore.push({
-//             content:tempArr[i].content,
-//             timeStp:tempArr[i].timeStp,
-//             done:tempArr[i].done
-//         });
-//     }
-// }
-
-//更新localstorage
-// function updateStorage(items){
-//     // itemListStore = items
-//     for (i=0;i<items.length;++i){
-//         item=items[i];
-//         itemListStore.push({
-//             content:item.innerText,
-//             timeStp: new Date().getTime().toString(),
-//             done:((item.classList.contains(CL_completed))? true:false)
-//         })
-//     }    
-    
-    
-//     localStorage.setItem('itemData',JSON.stringify(itemListStore));
-// }
-
 function update() {
   // showRightPanel();
   var items = $All('.itemList div.itemNo');
@@ -137,15 +108,11 @@ function update() {
 
   // 清楚已完成
   var clearcompleted = $('.clear-completed');
-  // clearcompleted.style.visibility = completedNum > 0 ? 'visible' : 'hidden';
 
   // 全选完成
   var toggleAll = $('.toggle-all');
-  // toggleAll.style.visibility = items.length > 0 ? 'visible' : 'hidden';
   toggleAll.checked = items.length === completedNum;
 
-  // updateStorage();
-  // localStorage.setItem('itmData',JSON.stringify(itemListStore));
 }
 
 //初始化列表
@@ -220,14 +187,12 @@ function deleteAllComplete(){
   console.log(itemListStore);
   update();
   updateStorage();
-  // initiateList();
 }
 
 function addTodo(msg) {
     var todoList = $('#list');
   
     var item = document.createElement('div');
-    // var id = 'item' + guid++;
     item.timeStp = "id"+new Date().getTime().toString();
     var id = item.timeStp;
     item.setAttribute('id', item.timeStp);
@@ -252,47 +217,12 @@ function addTodo(msg) {
     item.addEventListener("touchend",touchControler.end);
 
     var label = item.querySelector('.content');
-    // label.addEventListener('dblclick', function() {
-
-    // longTapTime=setTimeout(() => {
-    //     editPanel.show(lastTargetId);
-    // }, 500);
-
-  //   item.addEventListener("touchstart", function (e) {
-  //     console.log('touchstart');
-  //     timer = setTimeout(function () {
-  //         console.log('LongPress');
-  //         e.preventDefault();
-  //         LongPress();
-  //     }, 200);
-  //   });
-
-  //   item.addEventListener("touchmove", function (e) {
-  //     console.log('touchmove');
-  //     clearTimeout(timer);
-  //     timer = 0;
-  // });
-
-  //   item.addEventListener("touchend", function (e) {
-  //     console.log('touchend');
-  //     clearTimeout(timer);
-  //     //if (timer != 0) {
-  //     //    alert('这是点击，不是长按');
-  //     //}
-  //     return false;
-  // });
 
     label.addEventListener("dblclick", function() {
-    // longTapTime=setTimeout(()=>{
-    // function EditContent(){
+
       console.log("time out");
       item.classList.add(CL_EDITING);
   
-      // var edit = document.createElement('input');
-      // var finished = false;
-      // edit.setAttribute('type', 'text');
-      // edit.setAttribute('class', 'edit');
-      // edit.setAttribute('value', label.innerHTML);
 
       $('.editColumn').style.display="display";
       var finished = false;
@@ -348,14 +278,6 @@ function addTodo(msg) {
     item.classList.add(CL_EDITING);
     var label = item.querySelector('.content');
     
-
-    // var edit = document.createElement('input');
-    // var finished = false;
-    // edit.setAttribute('type', 'text');
-    // edit.setAttribute('class', 'edit');
-    // edit.setAttribute('value', label.innerHTML);
-
-    // $('.editColumn').style.display="block";
     var finished = false;
     var edit = $('#EditinputBlock');
     edit.setAttribute('value',label.innerHTML)
@@ -383,8 +305,6 @@ function addTodo(msg) {
         finish();
       }
     }, false);
-
-    // item.appendChild(edit);
     
     edit.focus();
   }
@@ -436,8 +356,6 @@ function clearcompletedTodoList() {
 
 function changeColor(itemId){
   console.log("change color");
-  // $('.editNcolor').style.display="block";
-  // var colorInputBox = $('#colorInputBox');
   itemDiv = $('#'+itemId);
   for(var item of colorArr){
     var el=document.createElement('div');
@@ -448,11 +366,8 @@ function changeColor(itemId){
     subel.style.fontSize='28px';
     el.appendChild(subel);
     el.addEventListener('touchstart',(e)=>{
-        // document.getElementsByTagName('body')[0].style.backgroundColor=e.target.style.color;
         itemDiv.children[0].getElementsByTagName("div")[0].style.backgroundColor=e.target.style.color;
         console.log(itemDiv.children[0].getElementsByTagName("div"));
-        // $('#colorInputBox').removeChild(el);
-        // $('.editNcolor').style.display="none";
         var colorSelectorToDelete = document.getElementsByClassName('colorSelector');
         for(var i = colorSelectorToDelete.length - 1; i >= 0; i--) { 
         colorSelectorToDelete[i].parentNode.removeChild(colorSelectorToDelete[i]); 
@@ -470,7 +385,6 @@ function showSearchPanel(){
 }
 
 function search(searchContent) {
-  // searchResult = itemListStore;
   console.log("search func");
   var searchbox = $('#SearchinputBlock');
   searchResult = JSON.parse(JSON.stringify(itemListStore));
@@ -492,7 +406,6 @@ function search(searchContent) {
   $('#displayUnfinished').style.display = "none";
   $('.searchResultIcon').style.display="";
   isSearching = true;
-    // updateStorage();
   console.log("search result:");
   console.log(searchResult);
   console.log(itemListStore);
@@ -515,7 +428,6 @@ function showNormal(){
     if(normalResultItem.done){
       item.classList.add(CL_completed);
     }
-    // item.innerHTML = searchResult[j].content;
     item.innerHTML = [
       '<div class="itemInner">',
       '  <input class="toggle" type="checkbox">',
@@ -524,7 +436,6 @@ function showNormal(){
       '</div>'
   ].join('');
 
-    // console.log(item);
     todoList.appendChild(item);
   }
   update();
@@ -547,7 +458,6 @@ function showSearch(){
     if(searchResultItem.done){
       item.classList.add(CL_completed);
     }
-    // item.innerHTML = searchResult[j].content;
     item.innerHTML = [
       '<div class="itemInner">',
       '  <input class="toggle" type="checkbox">',
@@ -601,7 +511,6 @@ touchControler={
           return;
       }
 
-      // currentTargetId=element.getId(currentTouch.target);
       currentTargetId = getId(currentTouch.target);
       console.log(currentTargetId);
       console.log(lastTargetId);
@@ -610,7 +519,6 @@ touchControler={
           currentTouch.clientX-lastTouch.clientX>=60&&
           Math.abs(currentTouch.clientY-lastTouch.clientY)<=60)
           {
-              // itemOp.delete(lastTargetId); 
               //右滑删除
               removeTodo(lastTargetId);
               clearAll();
@@ -621,9 +529,7 @@ touchControler={
           currentTouch.clientX-lastTouch.clientX<=-60&&
           Math.abs(currentTouch.clientY-lastTouch.clientY)<=60)
           {
-              // itemOp.modify(lastTargetId); 
               //左滑修改
-              // removeTodo(lastTargetId);
               $('.editNcolor').style.display="block";
               var colorSelectorToDelete = document.getElementsByClassName('colorSelector');
               for(var i = colorSelectorToDelete.length - 1; i >= 0; i--) { 
@@ -679,13 +585,11 @@ function init() {
   
       search(msg);
       $('.Search-container').style.display="none";
-      // newItem.value = '';
 
     }, false);
   
     var clearCompleted = $('.clear-completed');
     clearCompleted.addEventListener('click', function() {
-      // clearCompletedTodoList();
       deleteAllComplete();
     }, false);
   
@@ -704,7 +608,6 @@ function init() {
           }
           filter.classList.add(CL_SELECTED);
           if($('#displayAll').classList.contains(CL_SELECTED)){
-            // isSearching = false;
             showNormal();
             $('#displayDone').style.display="";
             $('#displayUnfinished').style.display="";
@@ -714,24 +617,8 @@ function init() {
         }, false);
       })(filters[i])
     }
-
-    //color change panel
-  //   for(var item of colorArr){
-  //     var el=document.createElement('div');
-  //     el.classList.add('colorSelector');
-  //     var subel=document.createElement('span');
-  //     subel.classList.add('iconfont','icon-round-copy');
-  //     subel.style.color=item;
-  //     subel.style.fontSize='28px';
-  //     el.appendChild(subel);
-  //     el.addEventListener('touchstart',(e)=>{
-  //         document.getElementsByTagName('body')[0].style.backgroundColor=e.target.style.color;
-  //     })
-  //     $('#colorInputBox').appendChild(el);
-  // }
   
     update();
-    // updateStorage();
 };
 
 
@@ -741,7 +628,6 @@ function init() {
 
 if(localStorage.todos){
     // Former User with stored data
-    // getStorage();
     init();
     console.log(localStorage.itemData);
     var tempArr=JSON.parse(localStorage.itemData);
@@ -758,7 +644,6 @@ if(localStorage.todos){
 }else{
     // New User
     localStorage.setItem('todos',true);
-    // getStorage();
     init();
     itemListStore=[
       {
@@ -791,23 +676,3 @@ if(localStorage.todos){
     updateStorage();
     initiateList();
 }
-// items=[
-//     {
-//         content:'欢迎使用Todos',
-//         timeStp:new Date().getTime().toString(),
-//         done:false
-//     },
-//     {
-//         content:'左滑切换完成/取消',
-//         timeStp:(new Date().getTime()+parseInt(Math.random()*10+1)).toString(),
-//         done:false
-//     },
-//     {
-//         content:'右滑删除项目',
-//         timeStp:(new Date().getTime()+parseInt(Math.random()*100+1)).toString(),
-//         done:false
-//     },
-// ];
-// updateData();
-// diff(items);
-// 
